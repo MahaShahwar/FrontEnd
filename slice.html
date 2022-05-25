@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Slice</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <style>
+      /* Header css */
+        .col {
+            color: #00008B;
+        }
+        .dropdown:hover ul{
+            display: block;
+          }
+          .dropdown-menu:hover li:hover a{
+            background-color: #0096FF;
+            color:white;
+          }
+          .underline-on-hover:hover{
+            border-bottom: 2px solid #0096FA;
+          }
+          .signIn:hover{
+           
+            border-radius: 50px;
+          }
+          
+          .searchIcon{
+            margin-left: 5px;
+            margin-top: 10px;
+            background-color: transparent;
+            border-color: transparent;
+            color: #0096FF;
+
+
+          }
+
+          /*Slider css*/
+      
+        * {box-sizing: border-box;}
+          .mySlides {display: none;}
+          img {vertical-align: middle;}
+
+          /* Slideshow container */
+          .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+          }
+
+          /* The dots/bullets/indicators */
+          .line {
+           /* height: 15px;*/
+            height: 2px;
+            width: 150px;
+            margin: 0 2px;
+            background-color: #0096FF;
+            margin-left: 10px;
+            
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active {
+            background-color: #0096FF;
+            border-radius: 2px;
+            height: 5px;
+          }
+          .buttonsheadings{
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0px;
+
+          }
+          .sliderButton{
+            background-color: #0096FA;
+            color: white;
+            position: absolute;
+            margin-top: 180px;
+            margin-left: 200px;
+            border-radius: 50px;
+            border: none;
+
+          }
+          /* On smaller screens, decrease text size */
+          @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+          }
+
+          .fixtext{
+            position: absolute;
+            top: 100px;
+            color:white;
+            left: 200px;
+          }
+
+          /*Services csss */
+          .divopacity{
+            background: rgba(0, 0, 128, 0.6);
+            
+            height: 250px;
+            width: 100%;
+
+          }
+          /*promotion*/
+          .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto ;
+            gap: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: #2196F3;
+            align-items: center ;
+          }
+          .item1 {
+            grid-column: 2 / span 3;
+          }
+          .item2{
+            grid-column: 1 / span 3;
+          }
+          .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+          }
+
+          /*centers css */
+
+          .centerDiv{
+            margin-top: 50px;
+            height: 700px;
+            width: 100%;
+            background-image: url('https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7');
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+          }
+          .divopacity2{
+            background: rgba(0, 0, 128, 0.6);
+            
+            height: 700px;
+            width: 100%;
+          }
+          .centerGrid{
+            display: grid;
+            grid-template-columns: auto auto auto auto ;
+            gap: 50px;
+            padding: 10px;
+            margin-top: 40px;
+            text-align: center;
+            height: 230px;
+            align-items: center ;
+          }
+
+          .divImage{
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+            height: 200px;
+
+          }
+         
+          .footerList{
+            padding: 5px;
+            font-size: 15px;
+
+          }
+          .check li{
+            display: inline;
+          }
+          .icons{
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+            padding: 10px;
+            background: white;
+            color: black;
+          }
+          
+         
+
+          
+         
+    </style>
+    
+      
+      <div class="jumbotron jumbotron-fluid" style="background-color: transparent;">
+        <nav class="navbar" style="background-color: transparent;margin-left: 50px;">
+          <div class="container-fluid" >
+            <div class="navbar-header">
+              <a class="navbar-brand col" href="#" class="col" >Slice</a>
+            </div>
+            <ul class="nav navbar-nav" >
+              <li><a href="#" class="col underline-on-hover">home</a></li>
+              <li class="dropdown"><a class="dropdown-toggle col" data-toggle="dropdown" href="#">about us<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                  <li><a href="#">Page 1-3</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle col" data-toggle="dropdown" href="#">services<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="#">Page 1-2</a></li>
+                  <li><a href="#">Page 1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="col underline-on-hover">contact</a></li>
+              <li style="border:1px solid #0096FA;border-radius: 50px;margin-top: 10px;"><a href="#" class="col signIn" style="padding: 5px;padding-left: 15px;padding-right: 15px;">    sign in    </a></li>
+              <li style="margin-top: 10px;"><a href="#" style=" border-radius: 50px;background-color: #0096FF;color: white;margin-left: 20px;padding: 5px;padding-left: 15px;padding-right: 15px;">slice business</a></li>
+              
+              <button class="searchIcon"><i class="glyphicon glyphicon-search "></i></button>
+              
+            </ul>
+            
+          </div>
+        </nav>
+
+      <!--Slider Image-->
+        <div class="slideshow-container">
+          <h2 class="fixtext">slice tour payments</h2>
+          <button class="sliderButton"><h3 class="buttonsheadings">Sign up</h3></button>
+          <div class="mySlides ">
+            <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" style="width:100%;height:500px">
+          </div>
+          
+          <div class="mySlides ">  
+            <img src="https://media.istockphoto.com/photos/freedom-chains-that-transform-into-birds-charge-concept-picture-id1322104312?b=1&k=20&m=1322104312&s=170667a&w=0&h=VQyPkFkMKmo0e4ixjhiOLjiRs_ZiyKR_4SAsagQQdkk=" style="width:100%;height: 500px;">
+          </div>
+          
+          <div class="mySlides ">
+            <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" style="width:100%;height: 500px;">
+          </div>
+          
+          </div>
+          <br>
+           
+          <!-- slider Show -->
+          <div style="text-align:center;margin-bottom: 0px;">
+            <span class="line"></span> 
+            <span class="line"></span> 
+            <span class="line"></span> 
+          </div>
+        </div>
+<!--
+      <div style="height: 250px;width: 100%;background-image: url('https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7');background-repeat: no-repeat;background-size: 100%;">
+          
+          <div class="divopacity ">
+            <h3 style="color: white;text-align: center;padding-top: 20px;">services</h3>  
+            <div class="grid-container" >
+            
+              <div style="float: left; color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>laser</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>filler</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>botox</h4>
+              </div >
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>dental</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>skin</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>operations</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+                <h4>doctors</h4>
+              </div>
+              <div style="float: left;color: white;">
+                <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE="> 
+                <h4>medical center</h4>
+              </div>
+              </div>
+          
+        </div>   
+      </div>-->
+
+      <!--services-->
+      <div style="height: 250px;width: 100%;background-image: url('https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7');background-repeat: no-repeat;background-size: 100%;">
+          
+        <div class="divopacity ">
+          <h3 style="color: white;text-align: center;padding-top: 20px;margin-bottom: 60px;">services</h3>  
+          <div class="row">
+            <div class="col-sm-2" style="text-align: center;"></div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>laser</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>filler</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>botox</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>dental</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>skin</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>doctors</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>operations</h4>
+            </div>
+            <div class="col-sm-1" style="text-align: center;">
+              <img style="height: 50px;width: 50px;" src="https://media.istockphoto.com/photos/beautiful-attractive-woman-visiting-a-beauty-clinic-picture-id1124229411?k=20&m=1124229411&s=612x612&w=0&h=hVnpzPpdpg53iCJOZlFlGr04tna8_EuEMepx23I_2JE=">
+              <h4>medical</br> operations</h4>
+            </div>
+            <div class="col-sm-2" style="text-align: center;"></div>
+           
+          </div>
+
+        </div>
+        </div>
+
+      <div style="height: 50px;"></div>
+<!--promotions-->
+      <div style="width: 80%;margin:0 auto;text-align: center;">
+        <h1 style="margin-bottom: 50px;">promotions</h1>
+        <div class="grid-container">
+          <div>1</div>
+          <div class="item1">2</div>
+          <div >3</div> 
+          <div class="item2">2</div>
+          <div>3</div> 
+          <div>1</div>
+        </div>
+       
+        <div style="text-align: center;color: black;">
+          <button id="MC" style="margin-top: 20px;background-color: transparent;border-width: 0px;">more promotions
+            <i class='fa fa-angle-down' style="width: 100%;transform: scale(9,2);"></i>
+          </button>
+          
+        </div>
+      </div>
+
+
+<!--Centers-->
+      <div class="centerDiv">
+          
+        <div class="divopacity2 ">
+          <h1 style="color: white;text-align: center;padding-top: 20px;margin-bottom: 30px;">medical centers</h1>
+
+          <div style="width: 75%;margin:0 auto;text-align: center;">
+            <div class="centerGrid">
+              <div>
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div> 
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+            </div>
+          </div>
+
+
+          <div style="width: 75%;margin:0 auto;text-align: center;">
+            <div class="centerGrid">
+              <div>
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div> 
+              <div >
+                <img class="divImage" src="https://www.eastcoopermedctr.com/images/librariesprovidereastcooper/default-album/og_image.jpeg?sfvrsn=73c41e74_7">
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center;color: white;">
+            <button id="MC" style="margin-top: 20px;background-color: transparent;border-width: 0px;">more centers
+              <i class='fa fa-angle-down' style="width: 100%;transform: scale(9,2);"></i>
+            </button>
+            
+          </div>
+        </div>
+        
+      </div>
+<!--Information-->
+      <div style="background-size:100% 100% ;height: 600px;background-image: url('https://jes.edu.vn/wp-content/uploads/2017/10/h%C3%ACnh-%E1%BA%A3nh.jpg');background-repeat:no-repeat">
+        <h1 style="font-size: 50px;padding-top: 30px;padding-left: 100px;color: white;">how we work</h1>
+        <p style="font-size: 22px;padding-left: 100px;color: white;">
+          endering my resignation now so that I can be as</br>
+          helpful as possible to you during endering my</br>
+          resignation now so that I can be as helpful as</br>
+          possible to you duringendering my resignation</br>
+          now</br></br> 
+          so that I can be as helpful as possible to you</br>
+          during endering my resignation now so that I can</br>
+          be as helpful as possible to you during endering</br>
+          my resignation now so that I can be as helpful as</br>
+          possible to you during endering my resignation</br> 
+        </p>
+        <button style="background-color: purple;color: white;font-size: large;border-width: 0px;margin-left: 100px;padding-left: 30px;padding-right: 30px;padding-top: 15px;padding-bottom: 15px">Read More</button>
+      </div>
+<!--footer-->
+      <div class="d-flex flex-column h-100" style="background-color:#00008B;color:white;">
+    
+        <!-- FOOTER -->
+        <footer class="mw-100 py-5 flex-shrink-0">
+            <div class="container py-5">
+                <div class="row gy-4 gx-5"   style="margin-top: 50px;">
+
+                  <div class="col-lg-2 col-md-6">
+                    <h4 class="text-white mb-3">slice Shop</h4>
+                    <ul class="list-unstyled" style="padding-top: 40px;">
+                        <li class="footerList"><a href="#" style="color: white;">Stores</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">slice app</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">How to buy with slice</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">slice help</a></li>
+                    </ul>
+                  </div>
+                   
+                  <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">slice business</h5>
+                        <ul class="list-unstyled text-muted" style="padding-top: 40px;">
+                            <li class="footerList"><a href="#" style="color: white;">slice for business</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">become a member</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">slice login</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">slice help</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">slice documentation</a></li>
+                        </ul>
+                  </div>
+                  <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">slice</h5>
+                        <ul class="list-unstyled text-muted" style="padding-top: 40px;">
+                            <li class="footerList"><a href="#" style="color: white;">home</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">about us</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">our services</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">contact us</a></li>
+                            <li class="footerList"><a href="#" style="color: white;">00966 11 456 4567</a></li>
+                        </ul>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                      <h5 class="h1 text-white" style="margin-top: 0px;">Slice</h5>
+                      <p class=" text-muted" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                      
+                      <h5 style="padding-top: 30px;">Saudi Arabia</h5>
+                      <ul class="list-unstyled text-muted check" style="padding-top: 10px;">
+                        <li class="footerList"><a href="#" style="color: white;">riyyadh</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">|</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">Jeddha</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">|</a></li>
+                        <li class="footerList"><a href="#" style="color: white;">Damam</a></li>
+                       </ul>
+                       
+                      <a href="#" class="fa fa-linkedin icons"></a>
+                      <a href="#" class="fa fa-twitter icons"></a>
+                      <a href="#" class="fa fa-facebook icons"></a>
+                      <a href="#" class="fa fa-instagram icons"></a>
+                      <a href="#" class="fa fa-youtube icons"></a>
+                      
+                  
+                  </div>
+                    
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-3">Contact us</h5>
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px;margin-top: 10px;width: 100%;border-radius: 5px;"></textarea>
+                                <button class="btn btn-primary" id="button-addon2" type="button"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var lines = document.getElementsByClassName("line");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < lines.length; i++) {
+    lines[i].className = lines[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  lines[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
+
